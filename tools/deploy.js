@@ -25,9 +25,9 @@ const remote = {
 Heroku
 const remote = {
   name: 'heroku',
-  url: 'https://git.heroku.com/testdeployzen.git',
+  url: 'https://git.heroku.com/<app>.git',
   branch: 'master',
-  website: 'https://testdeployzen.herokuapp.com',
+  website: 'https://<app>.herokuapp.com',
 };
 
 // Azure Web Apps
