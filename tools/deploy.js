@@ -22,13 +22,13 @@ const remote = {
   static: true,
 };
 
-// Heroku
-// const remote = {
-//   name: 'heroku',
-//   url: 'https://git.heroku.com/<app>.git',
-//   branch: 'master',
-//   website: 'https://<app>.herokuapp.com',
-// };
+Heroku
+const remote = {
+  name: 'heroku',
+  url: 'https://git.heroku.com/testdeployzen.git',
+  branch: 'master',
+  website: 'https://testdeployzen.herokuapp.com',
+};
 
 // Azure Web Apps
 // const remote = {
