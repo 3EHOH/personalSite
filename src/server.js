@@ -73,7 +73,7 @@ app.use(bodyParser.json());
 if (__DEV__) {
   app.enable('trust proxy');
 }
-app.enable('trust proxy');
+// app.enable('trust proxy');
 // app.get(
 //   '/login/facebook',
 //   passport.authenticate('facebook', {
@@ -193,13 +193,13 @@ app.use((err, req, res, next) => {
 // Launch the server
 // -----------------------------------------------------------------------------
 // const promise = models.sync().catch(err => console.error(err.stack));
-// if (!module.hot) {
-//   promise.then(() => {
-//     app.listen(config.port, () => {
-//       console.info(`The server is running at http://localhost:${config.port}/`);
-//     });
-//   });
-// }
+if (!module.hot) {
+  // promise.then(() => {
+  app.listen(config.port, () => {
+    console.info(`The server is running at http://localhost:${config.port}/`);
+  });
+  // });
+}
 
 //
 // Hot Module Replacement

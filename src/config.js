@@ -17,14 +17,16 @@ if (process.env.BROWSER) {
 
 module.exports = {
   // Node.js app
-  port: 8080,
+  port: process.env.PORT || 8080,
 
   // API Gateway
   api: {
     // API URL to be used in the client-side code
     clientUrl: process.env.API_CLIENT_URL || '',
     // API URL to be used in the server-side code
-    serverUrl: process.env.API_SERVER_URL || `0.0.0.0:8080`,
+    serverUrl:
+      process.env.API_SERVER_URL ||
+      `http://localhost:${process.env.PORT || 8080}`,
   },
 
   // Database

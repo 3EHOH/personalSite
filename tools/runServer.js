@@ -10,6 +10,7 @@
 import path from 'path';
 import cp from 'child_process';
 import webpackConfig from './webpack.config';
+// import 'http'
 
 // Should match the text string used in `src/server.js/server.listen(...)`
 const RUNNING_REGEXP = /The server is running at http:\/\/(.*?)\//;
@@ -46,8 +47,8 @@ function runServer() {
     }
 
     server = cp.spawn('node', [serverPath], {
-      env: Object.assign({ NODE_ENV: 'development' }, process.env),
-      silent: false,
+      env: Object.assign({ NODE_ENV: 'production' }, process.env),
+      silent: true,
     });
 
     if (pending) {
