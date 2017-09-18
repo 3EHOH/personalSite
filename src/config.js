@@ -17,7 +17,7 @@ if (process.env.BROWSER) {
 
 module.exports = {
   // Node.js app
-  port: process.env.PORT || 8080,
+  port: 8080,
 
   // API Gateway
   api: {
